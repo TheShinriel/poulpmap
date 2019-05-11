@@ -10,8 +10,8 @@ export const randomID = () => chance.hash({length: 15})
  * Recuperation de largeur et hauteur de la fenetre
  * @type {number}
  */
-export const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth
-export const screenHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight
+export const screenWidth = window ? window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth : 0
+export const screenHeight = window ? window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight : 0
 
 export const splitID = (id) => {
 
